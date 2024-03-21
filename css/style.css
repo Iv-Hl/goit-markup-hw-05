@@ -660,7 +660,6 @@ img {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
 }
 
 .is_open {
@@ -679,8 +678,8 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 24px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
 }
 
 .modal-close {
@@ -696,8 +695,17 @@ img {
     background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
 }
+
+.modal-close:hover,
+.modal-close:focus {
+    background-color: #404bbf;
+    border: none;
+    fill: #ffffff;
+}
+
 
 .modal-close-icon {
     
@@ -710,7 +718,6 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    margin-top: 48px;
     margin-bottom: 16px;
 }
 
@@ -718,11 +725,11 @@ img {
     margin-bottom: 8px;
 }
 
-.modal-field:four-child {
+.modal-field:nth-child(4) {
     margin-bottom: 16px;
 }
 
-.modal-field:last-child {
+.modal-field:nth-child(5) {
     margin-bottom: 24px;
 }
 
@@ -778,6 +785,8 @@ img {
     border: none;
     fill: #ffffff;
 }
+
+
 
 .modal-text {
     background-color: transparent;
@@ -838,13 +847,12 @@ img {
 }
 
 .label-span-footer {
-    position: relative;
+    display: inline-flex;
     width: 16px;
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 12px;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -860,7 +868,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked > .label-span-footer {
+.modal-check:checked + .modal-text > .label-span-footer {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD; 
