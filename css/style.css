@@ -868,7 +868,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked + .modal-check-text > .label-span-footer {
+input[type="checkbox"]:checked + .label-span-footer {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD; 
