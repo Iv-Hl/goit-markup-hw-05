@@ -835,7 +835,7 @@ img {
     letter-spacing: 0.04em;
     color: #8e8f99;
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 }
 
@@ -868,7 +868,7 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-check:checked + .label-span-footer {
+.modal-check:checked + .modal-check-text > .label-span-footer {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD; 
